@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    padding: 50px;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.library {
+    line-height: 20px;
+    padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.shelves {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.shelf {
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline;
+    font-size: 1.1em;
+    font-weight: 300;
+    max-width: 30%;
+    min-width: 15%;
+    padding: 5px;
+    transition-duration: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shelf:hover {
+    background: cornflowerblue;
+}
+
+.authors {
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.author {
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.4em;
+    font-weight: 200;
+    padding: 8px;
+    transition-duration: 0.5s;
+}
+
+.author:hover {
+    background: coral;
+    font-size: 1.6em;
+}
+
+
+.books {
+    display: grid;
+    grid: 150px / 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.book {
+    margin: 10px;
+}
+
+.book .title {
+    height: 40px;
+    padding: 5px;
+    font-size: 1.1em;
+    border-radius: 0 10px 0 0;
+    color: #fff;
+    background: coral;
+    border-bottom: 1px solid #000;
+    margin-bottom: 5px;
 }
